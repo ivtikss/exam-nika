@@ -13,13 +13,13 @@ def index():
     q1_text = q1[len(q1_number) + 2:]
 
     # Вопрос 2 из МАХП
-    q2_discipline = 'МАХП'
+    q2_discipline = 'ОХТ'
     q2 = random.choice(questions[q2_discipline])
     q2_number = q2.split('. ')[0]
     q2_text = q2[len(q2_number) + 2:]
 
     # Вопрос 3 из других дисциплин
-    excluded = ['ПАХТ', 'МАХП']
+    excluded = ['ПАХТ', 'ОХТ']
     other_disciplines = [d for d in questions if d not in excluded]
     q3_discipline = random.choice(other_disciplines)
     q3 = random.choice(questions[q3_discipline])
